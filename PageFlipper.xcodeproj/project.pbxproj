@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C71ABF5629AF85010019C5DF /* PageDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71ABF5529AF85010019C5DF /* PageDelegate.swift */; };
 		C74D830129AE0597000438BF /* PageDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74D830029AE0597000438BF /* PageDataSource.swift */; };
 		C74D830329AE1FCB000438BF /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74D830229AE1FCB000438BF /* TitleView.swift */; };
 		C74D830529AE21F9000438BF /* TitleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74D830429AE21F9000438BF /* TitleDataSource.swift */; };
 		C74D830729AE29ED000438BF /* TitleViewButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74D830629AE29ED000438BF /* TitleViewButton.swift */; };
 		C74D830929AE3BB9000438BF /* TitleViewBottomLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74D830829AE3BB9000438BF /* TitleViewBottomLine.swift */; };
-		C74D830B29AE3DE7000438BF /* FrameConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74D830A29AE3DE7000438BF /* FrameConfig.swift */; };
-		C74D830F29AE516E000438BF /* TitleDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74D830E29AE516E000438BF /* TitleDelegate.swift */; };
+		C74D830B29AE3DE7000438BF /* TitleFrameConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74D830A29AE3DE7000438BF /* TitleFrameConfig.swift */; };
+		C74D830F29AE516E000438BF /* ButtonDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74D830E29AE516E000438BF /* ButtonDelegate.swift */; };
 		C75335D429929D52007824A1 /* UIButton ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75335D329929D52007824A1 /* UIButton ext.swift */; };
 		C778EE77297ECEC7004EFCD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C778EE76297ECEC7004EFCD8 /* AppDelegate.swift */; };
 		C778EE79297ECEC7004EFCD8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C778EE78297ECEC7004EFCD8 /* SceneDelegate.swift */; };
@@ -26,13 +27,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C71ABF5529AF85010019C5DF /* PageDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageDelegate.swift; sourceTree = "<group>"; };
 		C74D830029AE0597000438BF /* PageDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageDataSource.swift; sourceTree = "<group>"; };
 		C74D830229AE1FCB000438BF /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		C74D830429AE21F9000438BF /* TitleDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleDataSource.swift; sourceTree = "<group>"; };
 		C74D830629AE29ED000438BF /* TitleViewButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewButton.swift; sourceTree = "<group>"; };
 		C74D830829AE3BB9000438BF /* TitleViewBottomLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewBottomLine.swift; sourceTree = "<group>"; };
-		C74D830A29AE3DE7000438BF /* FrameConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameConfig.swift; sourceTree = "<group>"; };
-		C74D830E29AE516E000438BF /* TitleDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleDelegate.swift; sourceTree = "<group>"; };
+		C74D830A29AE3DE7000438BF /* TitleFrameConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleFrameConfig.swift; sourceTree = "<group>"; };
+		C74D830E29AE516E000438BF /* ButtonDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonDelegate.swift; sourceTree = "<group>"; };
 		C75335D329929D52007824A1 /* UIButton ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton ext.swift"; sourceTree = "<group>"; };
 		C778EE73297ECEC7004EFCD8 /* PageFlipper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PageFlipper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C778EE76297ECEC7004EFCD8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -62,7 +64,8 @@
 			children = (
 				C74D830029AE0597000438BF /* PageDataSource.swift */,
 				C74D830429AE21F9000438BF /* TitleDataSource.swift */,
-				C74D830E29AE516E000438BF /* TitleDelegate.swift */,
+				C74D830E29AE516E000438BF /* ButtonDelegate.swift */,
+				C71ABF5529AF85010019C5DF /* PageDelegate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -73,7 +76,7 @@
 				C74D830229AE1FCB000438BF /* TitleView.swift */,
 				C74D830629AE29ED000438BF /* TitleViewButton.swift */,
 				C74D830829AE3BB9000438BF /* TitleViewBottomLine.swift */,
-				C74D830A29AE3DE7000438BF /* FrameConfig.swift */,
+				C74D830A29AE3DE7000438BF /* TitleFrameConfig.swift */,
 			);
 			path = TitleView;
 			sourceTree = "<group>";
@@ -223,12 +226,13 @@
 				C7EDD18329926A1100B4A01C /* AbstractVC.swift in Sources */,
 				C778EE7B297ECEC7004EFCD8 /* PageFlipperVC.swift in Sources */,
 				C778EE94297ED9F8004EFCD8 /* PageVC.swift in Sources */,
+				C71ABF5629AF85010019C5DF /* PageDelegate.swift in Sources */,
 				C778EE77297ECEC7004EFCD8 /* AppDelegate.swift in Sources */,
-				C74D830F29AE516E000438BF /* TitleDelegate.swift in Sources */,
+				C74D830F29AE516E000438BF /* ButtonDelegate.swift in Sources */,
 				C778EE79297ECEC7004EFCD8 /* SceneDelegate.swift in Sources */,
 				C74D830129AE0597000438BF /* PageDataSource.swift in Sources */,
 				C74D830329AE1FCB000438BF /* TitleView.swift in Sources */,
-				C74D830B29AE3DE7000438BF /* FrameConfig.swift in Sources */,
+				C74D830B29AE3DE7000438BF /* TitleFrameConfig.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

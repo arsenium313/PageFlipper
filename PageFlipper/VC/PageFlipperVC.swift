@@ -10,7 +10,7 @@ import UIKit
 class PageFlipperVC: UIViewController {
 
     //MARK: Properties
-    private let amountOfPages = 5
+    private let amountOfPages = 10
     
     private let viewForPageVC = UIView()
     private let titleView = TitleView()
@@ -51,7 +51,7 @@ class PageFlipperVC: UIViewController {
     
     private func configurePageVC() {
         pageVC.pageDataSource = self
-        
+        pageVC.pageDelegate = titleView
         self.addChild(pageVC)
         self.viewForPageVC.addSubview(pageVC.view)
         pageVC.view.frame = viewForPageVC.bounds
@@ -97,7 +97,7 @@ extension PageFlipperVC: TitleDataSource {
     
     func buttonForTitleView(_ titleView: TitleView, indexPath: IndexPath) -> UIButton {
         let button = TitleViewButton()
-        button.setTitle("Test title \(indexPath.row)", for: .normal)
+        button.setTitle("Test title \(indexPath.row - 1)", for: .normal)
         button.delegate = titleView
         return button
     }

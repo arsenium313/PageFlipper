@@ -14,13 +14,17 @@ class TitleViewBottomLine: UIView {
     //MARK: - Init
     override init(frame: CGRect) {
         super .init(frame: frame)
-        backgroundColor = .red
+        setupUI()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+    
     //MARK: - SeetupUI
-
+    private func setupUI(){
+        self.backgroundColor = #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)
+    }
+    
 }

@@ -7,6 +7,6 @@
 
 import UIKit
 
-protocol TitleDelegate {
-    func passNewFrame(x: CGFloat)
+protocol ButtonDelegate {
+    func didSelectButton(_ button: UIButton)
 }

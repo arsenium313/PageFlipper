@@ -9,15 +9,14 @@ import UIKit
 
 class TitleViewButton: UIButton {
     
-    var delegate: TitleDelegate?
+    //MARK: Properties
+    var delegate: ButtonDelegate?
     
-    var senderX: CGFloat = 0
-    
+
     //MARK: Init
     override init(frame: CGRect) {
         super .init(frame: frame)
         setupUI()
-        self.addTarget(self, action: #selector(didPress(_:)), for: .touchUpInside)
     }
     
     required init?(coder: NSCoder) {
@@ -27,17 +26,17 @@ class TitleViewButton: UIButton {
 
     //MARK: - Setup
     func setupUI() {
-        self.backgroundColor = #colorLiteral(red: 0, green: 0.46, blue: 0.89, alpha: 1)
+        self.backgroundColor = #colorLiteral(red: 0.476841867, green: 0.5048075914, blue: 1, alpha: 1)
         setTitleColor(.red, for: .highlighted)
+        self.addTarget(self, action: #selector(didPress(_:)), for: .touchUpInside)
     }
    
+    
     //MARK: - @objc
     @objc
     func didPress(_ sender: UIButton) {
-        print("Button pressed! \(String(describing: self.titleLabel?.text))")
-        print("sender frame = \(sender.frame)")
-        delegate?.passNewFrame(x: sender.frame.minX)
-        // нажал и пошла инфа в линию о фрейме нажатой кнопки
+        delegate?.didSelectButton(self)
+        // здесь будет реализация перехода на другой VC в PageVC
     }
     
 }

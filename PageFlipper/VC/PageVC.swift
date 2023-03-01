@@ -16,6 +16,7 @@ class PageVC: UIPageViewController {
         }
     }
     
+    var pageDelegate: PageDelegate?
     private var abstractVCs: [UIViewController] = []
     
     
@@ -23,8 +24,10 @@ class PageVC: UIPageViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         dataSource = self
+        delegate = self
     }
 
+    
     //MARK: - SetupUI
     private func setupUI() {
         abstractVCCreate()
@@ -34,7 +37,7 @@ class PageVC: UIPageViewController {
     private func abstractVCCreate() {
         let pageCount = pageDataSource?.pageCount(self)
         
-        for i in 1...pageCount! {
+        for i in 0...pageCount! {
             guard let vc: AbstractVC = pageDataSource?.vcToPresent(self) else { return }
             vc.labelText = "Page number = \(i)"
             abstractVCs.append(vc)
@@ -63,6 +66,21 @@ extension PageVC: UIPageViewControllerDataSource {
             }
         }
         return nil
+    }
+}
+
+//MARK: - Delegate
+extension PageVC: UIPageViewControllerDelegate {
+    func pageViewController(_ pageViewController: UIPageViewController, willTransitionTo pendingViewControllers: [UIViewController]) {
+        for (i, vc) in abstractVCs.enumerated() {
+            if vc == pendingViewControllers[0] {
+                pageDelegate?.selectedPage(pendingViewControllers[0], index: i)
+            }
+        }
+    }
+    
+    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+  
     }
     
 }
